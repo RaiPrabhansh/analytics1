@@ -57,4 +57,18 @@ df1 %>% sample_frac(.3)
 #Logistic Regression
 
 #
-df
+names(df1)
+df1[sample(1:30, size=5), 2] =NA
+sample(1:30, size=5)
+#5 missing values on random location in marks column
+sum(complete.cases(df1))
+sum(!complete.cases(df1))
+df1[!complete.cases(df1),2]=mean(df1$marks, na.rm=T)
+
+sample(1:30, size = 5)
+
+
+install.packages('mice')
+install.packages('VIM')
+
+
